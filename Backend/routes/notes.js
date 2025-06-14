@@ -3,42 +3,42 @@ const router = express.Router();
 const admin = require("firebase-admin");
 const { Timestamp } = require("firebase-admin/firestore");
 
-import { getAuth } from "firebase/auth"; // make sure Firebase is initialized
+// import { getAuth } from "firebase/auth"; // make sure Firebase is initialized
 
 
 
 
-    const token = await user.getIdToken();
-    console.log("Token:", token);
+//     const token = await user.getIdToken();
+//     console.log("Token:", token);
 
-    await axios.post(`${API_BASE_URL}/notes`,
-      {
-        Title: formData.title,
-        Course: formData.course,
-        Description: formData.description,
-        URL: formData.fileUrl,
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
+//     await axios.post(`${API_BASE_URL}/notes`,
+//       {
+//         Title: formData.title,
+//         Course: formData.course,
+//         Description: formData.description,
+//         URL: formData.fileUrl,
+//       },
+//       {
+//         headers: {
+//           Authorization: `Bearer ${token}`,
+//         },
+//       }
+//     );
 
-    // Reset form and refresh notes
-    setFormData({ title: "", course: "", type: "Lecture Notes", description: "", fileUrl: "" });
-    setShowForm(false);
-    setIsLoading(true);
+//     // Reset form and refresh notes
+//     setFormData({ title: "", course: "", type: "Lecture Notes", description: "", fileUrl: "" });
+//     setShowForm(false);
+//     setIsLoading(true);
 
-    const res = await axios.get(`${API_BASE_URL}/notes`);
-    setNotes(res.data);
-    setFilteredNotes(res.data);
-    setIsLoading(false);
-  } catch (err) {
-    console.error("Error uploading note:", err);
-    alert("Failed to upload note. Check console for details.");
-  }
-};
+//     const res = await axios.get(`${API_BASE_URL}/notes`);
+//     setNotes(res.data);
+//     setFilteredNotes(res.data);
+//     setIsLoading(false);
+//   } catch (err) {
+//     console.error("Error uploading note:", err);
+//     alert("Failed to upload note. Check console for details.");
+//   }
+// };
 
 
 
