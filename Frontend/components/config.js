@@ -1,1 +1,1 @@
-export const BASE_URL = "https://scan-lgp-chandu12304s-projects.vercel.app/";
+export const BASE_URL = "https://scan-ga9v.onrender.com/";
