@@ -19,6 +19,7 @@ const Login = ({ onLogin }) => {
     setIsLoading(true);
     
     try {
+      console.log("Trying to log in with URL:", `${BASE_URL}/auth/login`);
       const response = await axios.post(`${BASE_URL}/auth/login`, { 
         email, 
         password 
